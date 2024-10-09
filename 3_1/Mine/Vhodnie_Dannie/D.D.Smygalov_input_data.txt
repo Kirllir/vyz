@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+// Function
+int sum(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int a, b, c, d;
+    
+    // Initial values
+    a = 10;
+    b = 5;
+    c = 3;
+    d = 8;
+
+    // Arithmetic operations
+    a = b * c;
+    b = a + d;
+    c = d - b;
+    d = a % c;
+
+    // Bit operations
+    a = b << 1;
+    b = c >> 1;
+
+    // Loop that modifies existing variables
+    for (int i = 0; i < 3; i++) {
+        a += b;
+        b *= 2;
+    }
+
+    // While loop with further modifications
+    while (c < 20) {
+        c += d;
+        d = a % 5;
+    }
+
+    // Conditional operations
+    if (a > b) {
+        c = a + b;
+    } else {
+        c = a - b;
+    }
+
+    // Call the sum function with two numbers
+    int result = sum(a, b);
+    
+    printf("Sum of a and b: %d\n", result);
+    printf("Final values:\n");
+    printf("a: %d\n", a);
+    printf("b: %d\n", b);
+    printf("c: %d\n", c);
+    printf("d: %d\n", d);
+
+    return 0;
+}

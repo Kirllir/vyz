@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+// FSimple func
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    int x, y, z, w;
+    
+    // Vars
+    x = 12;
+    y = 4;
+    z = 7;
+    w = 9;
+
+    // Math
+    x = y * z;
+    y = x + w;
+    z = w - y;
+    w = x % z;
+
+    // Bits
+    x = y << 2;
+    y = z >> 2;
+
+    // Logic
+    if (x > y) {
+        z = x + y;
+    } else {
+        z = x - y;
+    }
+
+    // Loops
+    for (int i = 0; i < 2; i++) {
+        x += y;
+        y *= 3;
+    }
+
+    // Modify variables using a while loop
+    while (z < 15) {
+        z += w;
+        w = x % 3;
+    }
+
+    // Func call
+    int product = multiply(x, y);
+    
+    printf("multiply of x and y: %d\n", product);
+    printf("x: %d\n", x);
+    printf("y: %d\n", y);
+    printf("z: %d\n", z);
+    printf("w: %d\n", w);
+
+    return 0;
+}
